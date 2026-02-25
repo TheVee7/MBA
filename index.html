@@ -286,6 +286,15 @@
       background: linear-gradient(90deg, var(--accent), var(--accent-hover));
       border-radius: var(--radius) var(--radius) 0 0;
     }
+    /* Add this to your CSS to prevent the LinkedIn link from being invisible in Dark Mode */
+    .footer a {
+      transition: color var(--transition);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .footer a:hover {
+      color: var(--accent);
+    }
 
     .module-card-top { display: flex; align-items: flex-start; justify-content: space-between; }
     .module-number { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); font-family: 'Courier New', monospace; }
@@ -337,8 +346,9 @@
       <div class="modules-grid" id="modulesGrid"></div>
 
       <footer class="footer">
-        <a href="https://www.linkedin.com/in/varun-dev-sharma-b88260259/" target="_blank" rel="noopener noreferrer">Initiative By Vee</a>
-      </footer>
+      <p>MBA Notes Wallet · 2025</p>
+      <a href="https://www.linkedin.com/in/varun-dev-sharma-b88260259/" target="_blank" rel="noopener noreferrer">Initiative By Vee</a>
+    </footer>
     </main>
   </div>
 
