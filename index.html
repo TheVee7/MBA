@@ -286,6 +286,15 @@
       background: linear-gradient(90deg, var(--accent), var(--accent-hover));
       border-radius: var(--radius) var(--radius) 0 0;
     }
+    /* Add this to your CSS to prevent the LinkedIn link from being invisible in Dark Mode */
+    .footer a {
+      transition: color var(--transition);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .footer a:hover {
+      color: var(--accent);
+    }
 
     .module-card-top { display: flex; align-items: flex-start; justify-content: space-between; }
     .module-number { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); font-family: 'Courier New', monospace; }
@@ -337,8 +346,23 @@
       <div class="modules-grid" id="modulesGrid"></div>
 
       <footer class="footer">
-        <a href="https://www.linkedin.com/in/varun-dev-sharma-b88260259/" target="_blank" rel="noopener noreferrer">Initiative By Vee</a>
-      </footer>
+  <p>MBA Notes Wallet · 2025</p>
+
+  <div class="contributors">
+    <span class="label">Contributors:</span>
+
+    <a href="https://www.linkedin.com/in/kunalguptaagr/" target="_blank" rel="noopener noreferrer">Kunal Gupta</a>
+    <!-- <a href="https://linkedin.com/in/aisha" target="_blank" rel="noopener noreferrer">Aisha</a> -->
+
+    <!-- Add more like this -->
+  </div>
+
+  <a href="https://www.linkedin.com/in/varun-dev-sharma-b88260259/" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     Initiative By Vee
+  </a>
+</footer>
     </main>
   </div>
 
@@ -346,8 +370,8 @@
     const modules = [
       { name: "Module 1", link: "https://drive.google.com/drive/folders/1d2mz4x2WINVj-bzFy-nSW-jclelnr_Kn?usp=drive_link", isCurrent: false },
       { name: "Module 2", link: "https://drive.google.com/drive/folders/1sT5pNZEZXh_d4jg62RYHIaoMP1csRTAh?usp=drive_link", isCurrent: false },
-      { name: "Module 3", link: "https://drive.google.com/drive/folders/1pk0SEz0VYRcUBR7l5ulkQMLqL7w-K6eb?usp=drive_link", isCurrent: true },
-      { name: "Module 4", link: "https://drive.google.com/drive/folders/1hpcMKOok7IXb-K-ovPew_rje_CWyiNN0?usp=drive_link", isCurrent: false },
+      { name: "Module 3", link: "https://drive.google.com/drive/folders/1pk0SEz0VYRcUBR7l5ulkQMLqL7w-K6eb?usp=drive_link", isCurrent: false },
+      { name: "Module 4", link: "https://drive.google.com/drive/folders/1hpcMKOok7IXb-K-ovPew_rje_CWyiNN0?usp=drive_link", isCurrent: true },
       { name: "Module 5", link: "https://drive.google.com/drive/folders/12wz3mwPljexM_wMowZZnk8FGw5Us7L3N?usp=drive_link", isCurrent: false },
       { name: "Module 6", link: "https://drive.google.com/drive/folders/1XJmz6DH9-UCyIaoLsSXnyDsxc9jve3CZ?usp=drive_link", isCurrent: false },
       { name: "Module 7", link: "https://drive.google.com/drive/folders/1PDsLOO-2vnkP-eEwCUNOnCO2oWfc7_1L?usp=drive_link", isCurrent: false },
